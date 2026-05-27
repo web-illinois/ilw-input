@@ -7,9 +7,9 @@ export default defineConfig({
     build: {
         outDir: "../dist",
         lib: {
-            name: "<%= name %>",
-            entry: "<%= name %>.ts",
-            fileName: "<%= name %>",
+            name: "ilw-input",
+            entry: "ilw-input.ts",
+            fileName: "ilw-input",
             formats: ["es"],
         },
         rollupOptions: {
