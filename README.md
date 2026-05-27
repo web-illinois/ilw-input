@@ -6,23 +6,29 @@ Links: **[ilw-input in Builder](https://builder3.toolkit.illinois.edu/component/
 
 ## Overview
 
-A 1-3 paragraph explanation of what the component does and how it presents.
+This provides classes to style form elements. All form elements should be inside an `<ilw-content>` tag and a `<form>` tag.
 
 ## Code Examples
 
 ```html
-<ilw-input></ilw-input>
+<ilw-content>
+    <form>
+        <div class="ilw-input-entry">
+            <label for="textbox">Text Box</label>
+            <input id="textbox" type="text">
+        </div>
+        <div class="ilw-input-entry">
+            <label for="textbox-required" class="ilw-label-required">Required Text Box </label>
+            <input id="textbox-required" type="text" required="">
+        </div>
+        
+    </form>
+</ilw-content>
 ```
 
 ## Accessibility Notes and Use
 
-Consider accessibility, both for building the component and for its use:
-
-- Is there sufficient color contrast?
-- Can the component be fully understood without colors?
-- Does the component need alt text or ARIA roles?
-- Can the component be navigated with a keyboard? Is the tab order correct?
-- Are focusable elements interactive, and interactive elements focusable?
-- Are form fields, figures, fieldsets and other interactive elements labelled?
 
 ## External References
+
+[Forms Tutorial]("https://www.w3.org/WAI/tutorials/forms/")
