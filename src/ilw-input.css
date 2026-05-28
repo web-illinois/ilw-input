@@ -4,10 +4,10 @@
 }
 
 input[type='submit'].ilw-button, input[type='cancel'].ilw-button {
-  background-color: var(--ilw-button--background-color);
-  border: 2px solid var(--ilw-button--border-color);
+  background-color: var(--ilw-color--control);
+  border: 2px solid var(--ilw-color--control-text);
   border-radius: .25em;
-  color: var(--ilw-button--foreground-color);
+  color: var(--ilw-color--control-text);
   cursor: pointer;
   display: inline-block;
   font: 700 1.188rem / 1.25rem var(--il-font-sans);
@@ -20,23 +20,23 @@ input[type='submit'].ilw-button, input[type='cancel'].ilw-button {
 }
 
 input[type='submit'].ilw-button:active, input[type='cancel'].ilw-button:active {
-  background-color: var(--ilw-button--active-background-color);
-  border-color: var(--ilw-button--active-border-color);
-  color: var(--ilw-button--active-color);
-  outline: solid var(--ilw-button--active-border-color) 2px;
+  background-color: var(--ilw-color--control);
+  border-color: var(--ilw-color--control-text);
+  color: var(--ilw-color--control-text);
+  outline: solid var(--ilw-color--control-text) 2px;
 }
 
 input[type='submit'].ilw-button:focus, input[type='cancel'].ilw-button:focus {
-  background-color: var(--ilw-link--focus-background-color);
-  border-color: var(--ilw-link--focus-color);
-  color: var(--ilw-link--focus-color);
-  outline: var(--ilw-link--focus-outline);
+  background-color: var(--ilw-color--focus--background);
+  border-color: var(--ilw-color--focus--text);
+  color: var(--ilw-color--focus--text);
+  outline: var(--ilw-color--focus--outline);
 }
 
 input[type='submit'].ilw-button:hover, input[type='cancel'].ilw-button:hover {
-  background-color: var(--ilw-button--focused-background-color);
-  border-color: var(--ilw-button--focused-border-color);
-  color: var(--ilw-button--focused-foreground-color);
+  background-color: var(--ilw-color--control-text);
+  border-color: var(--ilw-color--control-text);
+  color: var(--ilw-color--control);
   outline: 0;
 }
 
@@ -46,12 +46,12 @@ input[type='submit'].ilw-button:focus, input[type='submit'].ilw-button:hover, in
 
 
 ilw-content .ilw-input-entry {
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 ilw-content label, ilw-content legend, ilw-content .ilw-input-alert {
   display: block;
-  color: var(--il-blue);
+  color: var(--ilw-color--text);
   font: normal 500 1.25rem/1.5rem var(--il-font-sans);
   margin: 0;
   text-align: left;
@@ -68,7 +68,7 @@ ilw-content select, ilw-content input, ilw-content textarea, ilw-content datalis
   padding: 10px;
   font: 1rem/1.125rem var(--il-font-sans);
   background-color: #fff;
-  border: thin var(--il-blue) solid;
+  border: thin var(--ilw-color--text) solid;
   width: 200px;
 }
 
@@ -97,7 +97,7 @@ ilw-content input.ilw-input-short {
 
 ilw-content input:focus, ilw-content textarea:focus, ilw-content select:focus, ilw-content input:focus-visible, ilw-content textarea:focus-visible, ilw-content select:focus-visible {
   background-color: var(--il-storm-lighter-4);
-  outline: 3px solid var(--il-altgeld);
+  outline: 3px solid var(--ilw-color--link-hover);
 }
 
 ilw-content input:hover, ilw-content textarea:hover, ilw-content select:hover {
@@ -111,9 +111,9 @@ ilw-content button[disabled], ilw-content button[disabled]:focus, ilw-content bu
 }
 
 ilw-content .ilw-input-entry p, ilw-content .ilw-input-entry-compact p {
-  color: var(--il-storm);
+  color: var(--ilw-color--text);
   font: 1rem / 1.125rem var(--il-font-sans);
-  padding-top: 3px;
+  padding-top: 10px;
   margin: 0;
   grid-column: 1 / span 2;
   width: fit-content;
@@ -125,7 +125,7 @@ ilw-content .ilw-input-entry p, ilw-content .ilw-input-entry-compact p {
   vertical-align: middle;
   vertical-align: -moz-middle-with-baseline;
   padding-left: 2px;
-  color: var(--il-altgeld);
+  color: var(--ilw-color--link-hover);
 }
 
 ilw-content .ilw-input-alert {
@@ -135,17 +135,16 @@ ilw-content .ilw-input-alert {
   width: fit-content;
 }
 
-.ilw-input-entry-compact, .ilw-input-entry-checkbox {
+.ilw-input-entry-compact, .ilw-input-entry-checkbox-compact {
   display: grid;
   align-items: center;
-  margin: auto;
   grid-template-columns: var(--ilw-input-form-label-width) auto;
   margin: 20px 0;
   column-gap: 10px;
   row-gap: 5px;
 }
 
-.ilw-input-entry-compact label, .ilw-input-entry-checkbox label {
+.ilw-input-entry-compact > label, .ilw-input-entry-checkbox-compact > label {
   text-align: right;
   padding: 0;
 }
@@ -155,54 +154,143 @@ ilw-content input[type="checkbox"], ilw-content input[type="radio"] {
   height: 18px;
 }
 
-ilw-content .ilw-input-entry-radio {
-  display: grid;
-  align-items: center;
-  grid-template-columns: var(--ilw-input-form-label-width) 20px auto;
+ilw-content .ilw-input-entry-checkbox,
+ilw-content .ilw-input-entry-radio,
+ilw-content .ilw-input-entry-radio-vertical,
+ilw-content .ilw-input-entry-radio-compact,
+ilw-content .ilw-input-entry-radio-vertical-compact {
   margin: 20px 0;
 }
 
+ilw-content .ilw-input-entry-checkbox {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20px auto;
+}
+
+ilw-content .ilw-input-entry-checkbox input {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 5px 0;
+}
+
+ilw-content .ilw-input-entry-checkbox label {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0 20px 0 5px;
+  padding: 0;
+  text-align: left;
+}
+
+ilw-content .ilw-input-entry-radio {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20px auto;
+}
+
 ilw-content .ilw-input-entry-radio p {
-  text-align: right;
-  margin: 0 15px 0 0;
+  grid-column: 1 / span 2;
+  text-align: left;
+  margin: 0 0 5px 0;
   font-weight: 600;
   line-height: 1.4rem;
 }
 
 ilw-content .ilw-input-entry-radio input {
-  grid-column: 2;
+  grid-column: 1;
   margin: 5px 0;
 }
 
 ilw-content .ilw-input-entry-radio label {
-  grid-column: 3;
+  grid-column: 2;
   margin: 0 20px 0 5px;
+  padding: 0;
   text-align: left;
+}
+
+ilw-content .ilw-input-entry-radio > label:first-child,
+ilw-content .ilw-input-entry-radio > label:first-child + input[type="radio"] {
+  grid-row: 1;
 }
 
 ilw-content .ilw-input-entry-radio-vertical {
   display: grid;
   align-items: center;
-  grid-template-columns: var(--ilw-input-form-label-width) repeat(auto-fill, 20px var(--ilw-input-form-vertical-label-width));
-  margin: 20px 0;
+  grid-template-columns: repeat(auto-fill, 20px var(--ilw-input-form-vertical-label-width));
 }
 
 ilw-content .ilw-input-entry-radio-vertical p {
-  text-align: right;
-  margin: 0 15px 0 0;
+  grid-column: 1 / -1;
+  text-align: left;
+  margin: 0 0 5px 0;
   font-weight: 600;
   line-height: 1.4rem;
 }
 
+ilw-content .ilw-input-entry-radio-vertical input {
+  margin: 5px 0;
+}
+
 ilw-content .ilw-input-entry-radio-vertical label {
   margin: 0 20px 0 5px;
+  padding: 0;
+  text-align: left;
+}
+
+ilw-content .ilw-input-entry-radio-compact {
+  display: grid;
+  align-items: center;
+  grid-template-columns: var(--ilw-input-form-label-width) 20px auto;
+  column-gap: 10px;
+}
+
+ilw-content .ilw-input-entry-radio-compact p {
+  text-align: right;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.4rem;
+}
+
+ilw-content .ilw-input-entry-radio-compact input {
+  grid-column: 2;
+  margin: 5px 0;
+}
+
+ilw-content .ilw-input-entry-radio-compact label {
+  grid-column: 3;
+  margin: 0 20px 0 0;
+  padding: 0;
+  text-align: left;
+}
+
+ilw-content .ilw-input-entry-radio-vertical-compact {
+  display: grid;
+  align-items: center;
+  grid-template-columns: var(--ilw-input-form-label-width) repeat(auto-fill, 20px var(--ilw-input-form-vertical-label-width));
+  column-gap: 10px;
+}
+
+ilw-content .ilw-input-entry-radio-vertical-compact p {
+  text-align: right;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.4rem;
+}
+
+ilw-content .ilw-input-entry-radio-vertical-compact input {
+  margin: 5px 0;
+}
+
+ilw-content .ilw-input-entry-radio-vertical-compact label {
+  margin: 0 20px 0 0;
+  padding: 0;
   text-align: left;
 }
 
 ilw-content fieldset, ilw-content .ilw-input-disclaimer {
   padding: 20px;
   margin: 20px auto;
-  border: thin solid var(--il-orange);
+  border: thin solid var(--ilw-color--control-accent);
 }
 
 ilw-content .ilw-input-disclaimer {
@@ -237,7 +325,7 @@ ilw-content .ilw-toggle-slider > span .ilw-container {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--il-storm-lighter-1);
+  background-color: var(--ilw-color--border-light);
   transition: 0.4s;
   border-radius: 34px;
 }
@@ -255,7 +343,7 @@ ilw-content .ilw-toggle-slider > span .ilw-container:before {
 }
 
 ilw-content .ilw-toggle-slider input:checked + span .ilw-container {
-  background-color: var(--il-altgeld);
+  background-color: var(--ilw-color--control-text);
 }
 
 ilw-content .ilw-toggle-slider input:checked + span .ilw-container:before {
@@ -312,35 +400,48 @@ ilw-content .ilw-toggle-slider > input:checked + span .ilw-text-off {
 }
 
 @media (max-width: 800px) {
-  .ilw-input-entry-compact {
+  .ilw-input-entry-compact, .ilw-input-entry-checkbox-compact {
     display: block;
   }
-  .ilw-input-entry-compact label {
+  .ilw-input-entry-compact > label, .ilw-input-entry-checkbox-compact > label {
     text-align: left;
     padding: 0 0 5px 0;
   }
-  ilw-content .ilw-input-entry-radio-vertical {
+  ilw-content .ilw-input-entry-radio,
+  ilw-content .ilw-input-entry-radio-compact,
+  ilw-content .ilw-input-entry-radio-vertical,
+  ilw-content .ilw-input-entry-radio-vertical-compact {
     display: grid;
     align-items: center;
-    grid-template-columns: var(--ilw-input-form-label-width) 20px auto;
-    margin: 20px 0;
+    grid-template-columns: 20px auto;
   }
 
-  ilw-content .ilw-input-entry-radio-vertical p {
-    text-align: right;
-    margin: 0 15px 0 0;
+  ilw-content .ilw-input-entry-radio p,
+  ilw-content .ilw-input-entry-radio-compact p,
+  ilw-content .ilw-input-entry-radio-vertical p,
+  ilw-content .ilw-input-entry-radio-vertical-compact p {
+    grid-column: 1 / span 2;
+    text-align: left;
+    margin: 0 0 5px 0;
     font-weight: 600;
     line-height: 1.4rem;
   }
 
-  ilw-content .ilw-input-entry-radio-vertical input {
-    grid-column: 2;
+  ilw-content .ilw-input-entry-radio input,
+  ilw-content .ilw-input-entry-radio-compact input,
+  ilw-content .ilw-input-entry-radio-vertical input,
+  ilw-content .ilw-input-entry-radio-vertical-compact input {
+    grid-column: 1;
     margin: 5px 0;
   }
 
-  ilw-content .ilw-input-entry-radio-vertical label {
-    grid-column: 3;
+  ilw-content .ilw-input-entry-radio label,
+  ilw-content .ilw-input-entry-radio-compact label,
+  ilw-content .ilw-input-entry-radio-vertical label,
+  ilw-content .ilw-input-entry-radio-vertical-compact label {
+    grid-column: 2;
     margin: 0 20px 0 5px;
+    padding: 0;
     text-align: left;
   }
 }
