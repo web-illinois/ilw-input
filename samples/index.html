@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
     <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-global/latest/ilw-global.css">
     <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/ilw-icon/1.2.0/ilw-icon.css">
+    <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/ilw-content/1.3/ilw-content.css">
+    <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/ilw-columns/1.3/ilw-columns.css">
     <script type="module" src="https://cdn.toolkit.illinois.edu/ilw-icon/1.2.0/ilw-icon.js"></script>
-    <script type="module" src="http://localhost:5173/src/ilw-content.ts"></script>
+    <script type="module" src="https://cdn.toolkit.illinois.edu/ilw-content/1.3/ilw-content.js"></script>
+    <script type="module" src="https://cdn.toolkit.illinois.edu/ilw-columns/1.3/ilw-columns.js"></script>
     <script type="module" src="/src/ilw-input.ts"></script>
 </head>
 
@@ -26,6 +29,16 @@
             <label for="textbox2">Text Box With a Really Long Label that extends to at least three lines </label>
             <input id="textbox2" type="text">
         </div>
+        <ilw-columns gap="20px" padding="0">
+            <div class="ilw-input-entry">
+                <label for="textbox">First Name</label>
+                <input id="textbox" class="ilw-input-long" type="text">
+            </div>
+            <div class="ilw-input-entry">
+                <label for="textbox">Last Name</label>
+                <input id="textbox" class="ilw-input-long" type="text">
+            </div>
+        </ilw-columns>
         <div class="ilw-input-entry">
             <label for="textbox-short">Short Text Box </label>
             <input id="textbox-short" type="text" class="ilw-input-short">
@@ -188,35 +201,29 @@
             <p>Some explanatory text which might get long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque est turpis, quis facilisis sem bibendum quis. Vestibulum finibus rutrum leo at imperdiet. Proin porta odio ut laoreet pharetra. Aenean sit amet blandit nisl, nec scelerisque orci. Donec sagittis nisi aliquet quam molestie pharetra. Suspendisse tincidunt, eros sit amet aliquet malesuada, lectus elit ultricies mauris, in vehicula odio nisl quis massa. Morbi commodo est sit amet elit aliquet malesuada.</p>
         </div>
 
-        <div class="ilw-input-entry-compact">
-            <div class="ilw-input-entry-checkbox">
-                <label for="checkbox">Checkbox </label>
-                <input id="checkbox" type="checkbox">
-            </div>
+        <div class="ilw-input-entry-checkbox-compact">
+            <label for="checkbox-compact">Checkbox </label>
+            <input id="checkbox-compact" type="checkbox">
         </div>
 
-        <div class="ilw-input-entry-compact">
-            <div class="ilw-input-entry-radio">
-                <p>Radio Buttons Title </p>
-                <input type="radio" id="radio1" name="radio" value="1">
-                <label for="radio1">First Item</label>
-                <input type="radio" id="radio2" name="radio" value="2">
-                <label for="radio2">Second Item</label>
-                <input type="radio" id="radio3" name="radio" value="3">
-                <label for="radio3">Third Item</label>
-            </div>
+        <div class="ilw-input-entry-radio-compact">
+            <p>Radio Buttons Title </p>
+            <input type="radio" id="radio1-compact" name="radio-compact" value="1">
+            <label for="radio1-compact">First Item</label>
+            <input type="radio" id="radio2-compact" name="radio-compact" value="2">
+            <label for="radio2-compact">Second Item</label>
+            <input type="radio" id="radio3-compact" name="radio-compact" value="3">
+            <label for="radio3-compact">Third Item</label>
         </div>
 
-        <div class="ilw-input-entry-compact">
-            <div class="ilw-input-entry-radio-vertical">
-                <p>Vertical Radio Buttons Title </p>
-                <input type="radio" id="radio1-v" name="radio-v" value="1">
-                <label for="radio1-v">First Item</label>
-                <input type="radio" id="radio2-v" name="radio-v" value="2">
-                <label for="radio2-v">Second Item</label>
-                <input type="radio" id="radio3-v" name="radio-v" value="3">
-                <label for="radio3-v">Third Item</label>
-            </div>
+        <div class="ilw-input-entry-radio-vertical-compact">
+            <p>Vertical Radio Buttons Title </p>
+            <input type="radio" id="radio1-v-compact" name="radio-v-compact" value="1">
+            <label for="radio1-v-compact">First Item</label>
+            <input type="radio" id="radio2-v-compact" name="radio-v-compact" value="2">
+            <label for="radio2-v-compact">Second Item</label>
+            <input type="radio" id="radio3-v-compact" name="radio-v-compact" value="3">
+            <label for="radio3-v-compact">Third Item</label>
         </div>
 
         <div class="ilw-input-entry-compact">
@@ -280,15 +287,15 @@
         
         <fieldset>
             <legend>Field Set Radio Buttons</legend>
-            <div class="ilw-input-entry-compact">
+            <div class="ilw-input-entry-radio">
                 <label for="radio1-fs">First Item</label>
                 <input type="radio" id="radio1-fs" name="radio-fs" value="1">
             </div>
-            <div class="ilw-input-entry-compact">
+            <div class="ilw-input-entry-radio">
                 <label for="radio2-fs">Second Item</label>
                 <input type="radio" id="radio2-fs" name="radio-fs" value="2">
             </div>
-            <div class="ilw-input-entry-compact">
+            <div class="ilw-input-entry-radio">
                 <label for="radio3-fs">Third Item</label>
                 <input type="radio" id="radio3-fs" name="radio-fs" value="3">
             </div>
