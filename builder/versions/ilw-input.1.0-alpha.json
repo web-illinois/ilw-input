@@ -6,7 +6,7 @@
     "element-name": "ilw-input",
     "description": "Provides classes to style inputs and form elements.",
     "builder-version": "1.0-alpha",
-    "version": "1.0.0-alpha",
+    "version": "1.0-alpha",
     "date": "05/29/2026",
     "css": "https://dev.toolkit.illinois.edu/ilw-input/1.0.0-alpha/ilw-input.css",
     "js": "https://dev.toolkit.illinois.edu/ilw-input/1.0.0-alpha/ilw-input.js",
