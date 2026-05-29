@@ -4,8 +4,8 @@
     "github": "https://github.com/web-illinois/ilw-input/",
     "type": "web component",
     "element-name": "ilw-input",
-    "description": "Description for builder.",
-    "purpose": "Imperative mood purpose for builder homepage.",
+    "description": "Provides classes to style inputs and form elements.",
+    "purpose": "Form elements.",
     "toolkit-version": "",
     "production-version": "",
     "development-version": "1.0-alpha"

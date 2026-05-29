@@ -4,39 +4,76 @@
     "github": "https://github.com/web-illinois/ilw-input/",
     "type": "web component",
     "element-name": "ilw-input",
-    "description": "Description for builder.",
+    "description": "Provides classes to style inputs and form elements.",
     "builder-version": "1.0-alpha",
     "version": "1.0.0-alpha",
-    "date": "05/27/2026",
+    "date": "05/29/2026",
     "css": "https://dev.toolkit.illinois.edu/ilw-input/1.0.0-alpha/ilw-input.css",
     "js": "https://dev.toolkit.illinois.edu/ilw-input/1.0.0-alpha/ilw-input.js",
     "production": false,
     "notes": "",
     "parent-style": "",
+    "added-components" : [
+        {
+            "name": "Content",
+            "description": "Place your form elements inside ilw-content. You can use the theme attribute to change the color of the form elements.",
+            "link": "https://builder3.toolkit.illinois.edu/component/ilw-content/1-3/index.html",
+            "css": "https://cdn.toolkit.illinois.edu/ilw-content/1.3/ilw-content.css",
+            "js": "https://cdn.toolkit.illinois.edu/ilw-content/1.3/ilw-content.js"
+        }
+    ],
     "samples": [
         {
             "name": "default",
             "description": "Default information",
-            "text": "<p>Lorem ipsum</p>"
+            "text": "<ilw-content width=\"page\">\n    <form>\n        <h1>Form Information</h1>\n\n        <p>Sample form pieces.</p>\n\n        <div class=\"ilw-input-entry\">\n            <label for=\"textbox\">Text Box</label>\n            <input id=\"textbox\" type=\"text\">\n        </div>\n\n        <div class=\"ilw-input-entry\">\n            <label for=\"textbox-instructions\">Text Box With Instructions</label>\n            <input id=\"textbox-instructions\" type=\"text\">\n            <p>Some explanatory text which might get long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque est turpis, quis facilisis sem bibendum quis. Vestibulum finibus rutrum leo at imperdiet. Proin porta odio ut laoreet pharetra. Aenean sit amet blandit nisl, nec scelerisque orci. Donec sagittis nisi aliquet quam molestie pharetra. Suspendisse tincidunt, eros sit amet aliquet malesuada, lectus elit ultricies mauris, in vehicula odio nisl quis massa. Morbi commodo est sit amet elit aliquet malesuada.</p>\n        </div>\n\n        <h2>Heading example</h2>\n\n        <div class=\"ilw-input-entry\">\n            <label for=\"textbox-required\">Required Text Box </label>\n            <input id=\"textbox-required\" type=\"text\" required>\n        </div>\n\n        <div class=\"ilw-input-entry\">\n            <label for=\"textarea\">Text Area </label>\n            <textarea id=\"textarea\"></textarea>\n        </div>\n        \n        <div class=\"ilw-input-entry\">\n            <label for=\"textarea-required\">Required Text Area </label>\n            <textarea id=\"textarea-required\" required></textarea>\n        </div>\n        \n        <div class=\"ilw-input-entry\">\n            <label for=\"datetime-local\">Date/Time Picker </label>\n            <input type=\"datetime-local\" id=\"datetime-local\" value=\"\">\n        </div>\n        \n        <div class=\"ilw-input-entry\">\n            <label for=\"datetime-local-step\">Date/Time Picker, using step </label>\n            <input type=\"datetime-local\" id=\"datetime-local-step\" value=\"\" step=\"36000\">\n        </div>\n        \n        <div class=\"ilw-input-entry\">\n            <label for=\"date\">Date Picker </label>\n            <input type=\"date\" id=\"date\" value=\"\">\n        </div>\n        \n        <div class=\"ilw-input-entry\">\n            <label for=\"datalist\">Autocomplete</label>\n            <input id=\"datalist\" list=\"select\" type=\"text\" placeholder=\"Choose an Item\">\n            <datalist id=\"select\" class=\"select\">\n                <option value=\"First Item\"></option>\n                <option value=\"Second Item\"></option>\n                <option value=\"Third Item\"></option>\n            </datalist>\n            <p>The data list is used to give a user free-text options, but prompt them to choose a specific item. You can use JavaScript to enforce that what they choose is one of the options. <em>To start out, try typing \"item\"</em></p>\n        </div>\n        \n        <div class=\"ilw-input-entry\">\n            <label for=\"dropdown\">Dropdown </label>\n            <select id=\"dropdown\" name=\"dropdown\">\n                <option value=\"\">Choose one</option>\n                <option value=\"1\">First Item</option>\n                <option value=\"2\">Second Item</option>\n                <option value=\"3\">Third Item</option>\n            </select>\n        </div>\n\n        <div class=\"ilw-input-entry-checkbox\">\n            <label for=\"checkbox\">Checkbox </label>\n            <input id=\"checkbox\" type=\"checkbox\">\n        </div>\n\n        <div class=\"ilw-input-entry-radio\">\n            <p>Radio Buttons Title </p>\n            <input type=\"radio\" id=\"radio1\" name=\"radio\" value=\"1\">\n            <label for=\"radio1\">First Item</label>\n            <input type=\"radio\" id=\"radio2\" name=\"radio\" value=\"2\">\n            <label for=\"radio2\">Second Item</label>\n            <input type=\"radio\" id=\"radio3\" name=\"radio\" value=\"3\">\n            <label for=\"radio3\">Third Item</label>\n        </div>\n\n        <div class=\"ilw-input-entry-radio-vertical\">\n            <p>Vertical Radio Buttons Title </p>\n            <input type=\"radio\" id=\"radio1-v\" name=\"radio-v\" value=\"1\">\n            <label for=\"radio1-v\">First Item</label>\n            <input type=\"radio\" id=\"radio2-v\" name=\"radio-v\" value=\"2\">\n            <label for=\"radio2-v\">Second Item</label>\n            <input type=\"radio\" id=\"radio3-v\" name=\"radio-v\" value=\"3\">\n            <label for=\"radio3-v\">Third Item</label>\n        </div>\n\n        <div class=\"ilw-input-entry\">\n                <label for=\"toggle-checkbox\">Toggle Checkbox </label>\n                <div class=\"ilw-toggle-slider\">\n                    <input id=\"toggle-checkbox\" type=\"checkbox\" role=\"switch\"><span>\n                        <span class=\"ilw-container\"></span>\n                        <span aria-hidden=\"true\" class=\"ilw-text-on\">On</span>\n                        <span aria-hidden=\"true\" class=\"ilw-text-off\">Off</span></span>\n                </div>\n        </div>\n\n\n        <h2>Compact Versions</h2>\n        <div class=\"ilw-input-entry-compact\">\n            <label for=\"textbox-compact\">Text Box </label>\n            <input id=\"textbox-compact\" type=\"text\">\n        </div>\n        \n        <div class=\"ilw-input-entry-compact\">\n            <label for=\"textbox-instructions-compact\">Text Box With Instructions</label>\n            <input id=\"textbox-instructions-compact\" type=\"text\">\n            <p>Some explanatory text which might get long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque est turpis, quis facilisis sem bibendum quis. Vestibulum finibus rutrum leo at imperdiet. Proin porta odio ut laoreet pharetra. Aenean sit amet blandit nisl, nec scelerisque orci. Donec sagittis nisi aliquet quam molestie pharetra. Suspendisse tincidunt, eros sit amet aliquet malesuada, lectus elit ultricies mauris, in vehicula odio nisl quis massa. Morbi commodo est sit amet elit aliquet malesuada.</p>\n        </div>\n\n        <div class=\"ilw-input-entry-checkbox-compact\">\n            <label for=\"checkbox-compact\">Checkbox </label>\n            <input id=\"checkbox-compact\" type=\"checkbox\">\n        </div>\n\n        <div class=\"ilw-input-entry-radio-compact\">\n            <p>Radio Buttons Title </p>\n            <input type=\"radio\" id=\"radio1-compact\" name=\"radio-compact\" value=\"1\">\n            <label for=\"radio1-compact\">First Item</label>\n            <input type=\"radio\" id=\"radio2-compact\" name=\"radio-compact\" value=\"2\">\n            <label for=\"radio2-compact\">Second Item</label>\n            <input type=\"radio\" id=\"radio3-compact\" name=\"radio-compact\" value=\"3\">\n            <label for=\"radio3-compact\">Third Item</label>\n        </div>\n\n        <div class=\"ilw-input-entry-radio-vertical-compact\">\n            <p>Vertical Radio Buttons Title </p>\n            <input type=\"radio\" id=\"radio1-v-compact\" name=\"radio-v-compact\" value=\"1\">\n            <label for=\"radio1-v-compact\">First Item</label>\n            <input type=\"radio\" id=\"radio2-v-compact\" name=\"radio-v-compact\" value=\"2\">\n            <label for=\"radio2-v-compact\">Second Item</label>\n            <input type=\"radio\" id=\"radio3-v-compact\" name=\"radio-v-compact\" value=\"3\">\n            <label for=\"radio3-v-compact\">Third Item</label>\n        </div>\n\n        <div class=\"ilw-input-entry-compact\">\n            <label for=\"toggle-checkbox\">Toggle Checkbox </label>\n            <div class=\"ilw-toggle-slider\">\n                <input id=\"toggle-checkbox\" type=\"checkbox\" role=\"switch\"><span>\n                        <span class=\"ilw-container\"></span>\n                        <span aria-hidden=\"true\" class=\"ilw-text-on\">On</span>\n                        <span aria-hidden=\"true\" class=\"ilw-text-off\">Off</span></span>\n            </div>\n        </div>\n        \n        <h2>Buttons</h2>\n        <h3>Disabled Button</h3>\n        <div class=\"ilw-input-entry\">\n            <button class=\"ilw-button\" disabled>Disabled button </button>\n        </div>\n        \n\n        <h3>Toggle States</h3>\n        <div class=\"ilw-input-entry\">\n            <label>Toggle Button, starts disabled</label>\n            <button id=\"toggle\" class=\"ilw-button\" aria-pressed=\"false\" data-ilw-input-on=\"Enabled\" data-ilw-input-off=\"Disabled\"></button>\n            <p>This should be used when the effect happens immediately.</p>\n        </div>\n        \n        <div class=\"ilw-input-entry\">\n            <label>Toggle Button, starts enabled</label>\n            <button id=\"toggle-enabled\" class=\"ilw-button\" aria-pressed=\"true\" data-ilw-input-on=\"Enabled\" data-ilw-input-off=\"Disabled\"></button>\n            <p>This should be used when the effect happens immediately.</p>\n        </div>\n        \n\n        <h2>Misc</h2>\n        <div class=\"ilw-input-disclaimer\">\n            <input id=\"disclaimer\" type=\"checkbox\">\n            <label for=\"disclaimer\">The opinions, resources, and referrals provided on this website are intended for\n                informational purposes only and are not intended to take the place of medical or legal advice, or of\n                other appropriate services. We encourage you to seek direct local assistance from a qualified\n                professional if necessary before taking action.</label>\n        </div>\n        \n        <fieldset>\n            <legend>Field Set Title</legend>\n            <div class=\"ilw-input-entry\">\n                <label for=\"fname\">First name</label>\n                <input type=\"text\" id=\"fname\" name=\"fname\" class=\"ilw-input-long\">\n            </div>\n            <div class=\"ilw-input-entry\">\n                <label for=\"lname\">Last name</label>\n                <input type=\"text\" id=\"lname\" name=\"lname\">\n            </div>\n            <div class=\"ilw-input-entry\">\n                <label for=\"email\">Email</label>\n                <input type=\"email\" id=\"email\" name=\"email\">\n            </div>\n            <div class=\"ilw-input-entry\">\n                <input type=\"submit\" value=\"Send Information\" class=\"ilw-button ilw-input-no-label\">\n            </div>\n        </fieldset>\n        \n        <fieldset>\n            <legend>Field Set Radio Buttons</legend>\n            <div class=\"ilw-input-entry-radio\">\n                <label for=\"radio1-fs\">First Item</label>\n                <input type=\"radio\" id=\"radio1-fs\" name=\"radio-fs\" value=\"1\">\n            </div>\n            <div class=\"ilw-input-entry-radio\">\n                <label for=\"radio2-fs\">Second Item</label>\n                <input type=\"radio\" id=\"radio2-fs\" name=\"radio-fs\" value=\"2\">\n            </div>\n            <div class=\"ilw-input-entry-radio\">\n                <label for=\"radio3-fs\">Third Item</label>\n                <input type=\"radio\" id=\"radio3-fs\" name=\"radio-fs\" value=\"3\">\n            </div>\n        </fieldset>\n        \n        <div class=\"ilw-input-alert\">Alert for forms</div>\n        <p></p>\n    </form>\n</ilw-content>"
         }
     ],
     "attributes-fixed": [],
     "attributes-text": [],
-    "attributes": [
+    "attributes": [],
+    "classes-fixed": [],
+    "classes": [
         {
-            "name": "theme",
-            "description": "Color theme used",
+            "name": "input layout",
+            "description": "Classes to change the layout of the input element. These classes should be used on the input element.",
+            "depreciated": false,
+            "values": [
+                "ilw-input-entry",
+                "iilw-input-entry-compact"
+            ]
+        },
+        {
+            "name": "checkbox layout",
+            "description": "Classes to change the layout of checkboxes. These classes should be used on the div containing the checkbox and its label.",
+            "depreciated": false,
+            "values": [
+                "ilw-input-entry-checkbox",
+                "ilw-input-entry-checkbox-compact"
+            ]
+        },
+        {
+            "name": "radio button layout",
+            "description": "Classes to change the layout of radio buttons. These classes should be used on the div containing the radio buttons and their labels.",
+            "depreciated": false,
+            "values": [
+                "ilw-input-entry-radio",
+                "ilw-input-entry-radio-vertical",
+                "ilw-input-entry-radio-compact",
+                "ilw-input-entry-radio-vertical-compact"
+            ]
+        },
+        {
+            "name": "input length",
+            "description": "Classes to change the length of the inputs. These classes should be used on input element.",
             "depreciated": false,
             "values": [
                 "",
-                "blue",
-                "orange",
-                "white"
+                "ilw-input-short",
+                "ilw-input-long"
             ]
         }
     ],
-    "classes-fixed": [],
-    "classes": [],
     "css-variables": [
     ]
 }
