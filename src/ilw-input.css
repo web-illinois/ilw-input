@@ -100,8 +100,16 @@ ilw-content input:focus, ilw-content textarea:focus, ilw-content select:focus, i
   outline: 3px solid var(--ilw-color--link-hover);
 }
 
+ilw-content[theme="blue-gradient"] input:focus, ilw-content[theme="blue-gradient"] textarea:focus, ilw-content[theme="blue-gradient"] select:focus, ilw-content[theme="blue-gradient"] input:focus-visible, ilw-content[theme="blue-gradient"] textarea:focus-visible, ilw-content[theme="blue-gradient"] select:focus-visible {
+  outline: 3px solid var(--ilw-color--blue--link-hover);
+}
+
 ilw-content input:hover, ilw-content textarea:hover, ilw-content select:hover {
   background-color: var(--il-storm-lighter-4);
+}
+
+ilw-content[theme="gray"] input:hover, ilw-content[theme="gray"] textarea:hover, ilw-content[theme="gray"] select:hover {
+  background-color: var(--il-arches-95);
 }
 
 ilw-content button[disabled], ilw-content button[disabled]:focus, ilw-content button[disabled]:hover {
@@ -162,6 +170,11 @@ ilw-content input[type="checkbox"], ilw-content input[type="radio"] {
   border: thin var(--ilw-color--text) solid;
   background-color: #fff;
   color: var(--ilw-color--text);
+}
+
+ilw-content[theme="blue"] input[type="checkbox"], ilw-content input[type="radio"],
+ilw-content[theme="blue-gradient"] input[type="checkbox"], ilw-content input[type="radio"] {
+  color: var(--il-blue);
 }
 
 ilw-content input[type="checkbox"] {
@@ -384,12 +397,21 @@ ilw-content .ilw-toggle-slider input:checked + span .ilw-container {
   background-color: var(--ilw-color--control-text);
 }
 
+ilw-content[theme='orange'] .ilw-toggle-slider input:checked + span .ilw-container,
+ilw-content[theme='orange-gradient'] .ilw-toggle-slider input:checked + span .ilw-container {
+  background-color: var(--ilw-color--orange--control-accent);
+}
+
+ilw-content[theme='blue'] .ilw-toggle-slider input:checked + span .ilw-container,
+ilw-content[theme='blue-gradient'] .ilw-toggle-slider input:checked + span .ilw-container {
+  background-color: var(--ilw-color--blue--control-accent);
+}
 ilw-content .ilw-toggle-slider input:checked + span .ilw-container:before {
   transform: translateX(26px);
 }
 
 ilw-content .ilw-toggle-slider input:focus + span span {
-  outline: 3px solid var(--il-blue);
+  outline: 3px solid var(--ilw-color--control-text);
 }
 
 
@@ -399,7 +421,7 @@ ilw-content .ilw-toggle-slider > span .ilw-text-on {
   left: 70px;
   right: 0;
   bottom: 0;
-  color: var(--il-blue);
+  color: var(--ilw-color--text);
   font: normal 400 1.25rem / 1.5rem var(--il-font-sans);
   margin: 0;
   width: 50px;
@@ -414,7 +436,7 @@ ilw-content .ilw-toggle-slider > span .ilw-text-off {
   left: 70px;
   right: 0;
   bottom: 0;
-  color: var(--il-blue);
+  color: var(--ilw-color--text);
   font: normal 400 1.25rem / 1.5rem var(--il-font-sans);
   margin: 0;
   width: 50px;
