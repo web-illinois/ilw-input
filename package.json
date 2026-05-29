@@ -4,7 +4,7 @@
     "repository": "github:web-illinois/ilw-input",
     "private": false,
     "license": "MIT",
-    "version": "1.0.1-alpha",
+    "version": "1.0.2-alpha",
     "type": "module",
     "files": [
         "src/**",
@@ -23,6 +23,10 @@
     },
     "main": "./dist/ilw-input.js",
     "module": "./dist/ilw-input.js",
+    "publishConfig": {
+        "access": "public",
+        "tag": "alpha"
+    },
     "scripts": {
         "dev": "vite",
         "build": "tsc --noEmit && vite build --config vite.transpile.config.ts --emptyOutDir && vite build --config vite.build.config.ts --emptyOutDir",
