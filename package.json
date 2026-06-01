@@ -1,10 +1,13 @@
 {
     "name": "@illinois-toolkit/ilw-input",
     "description": "Provides classes to style inputs and form elements.",
-    "repository": "github:web-illinois/ilw-input",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/web-illinois/ilw-input.git"
+    },
     "private": false,
     "license": "MIT",
-    "version": "1.0.2-alpha",
+    "version": "1.0.3-alpha",
     "type": "module",
     "files": [
         "src/**",
