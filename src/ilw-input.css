@@ -96,7 +96,7 @@ ilw-content input.ilw-input-short {
 }
 
 ilw-content input:focus, ilw-content textarea:focus, ilw-content select:focus, ilw-content input:focus-visible, ilw-content textarea:focus-visible, ilw-content select:focus-visible {
-  background-color: var(--il-storm-lighter-4);
+  background-color: var(--ilw-color--focus--background);
   outline: 3px solid var(--ilw-color--link-hover);
 }
 
@@ -105,7 +105,7 @@ ilw-content[theme="blue-gradient"] input:focus, ilw-content[theme="blue-gradient
 }
 
 ilw-content input:hover, ilw-content textarea:hover, ilw-content select:hover {
-  background-color: var(--il-storm-lighter-4);
+  background-color: var(--ilw-color--focus--background);
 }
 
 ilw-content[theme="gray"] input:hover, ilw-content[theme="gray"] textarea:hover, ilw-content[theme="gray"] select:hover {
