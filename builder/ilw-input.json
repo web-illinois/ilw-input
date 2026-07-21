@@ -6,7 +6,7 @@
     "element-name": "ilw-input",
     "description": "Provides classes to style inputs and form elements.",
     "purpose": "Form elements.",
-    "toolkit-version": "",
-    "production-version": "",
+    "toolkit-version": "1.0",
+    "production-version": "1.0",
     "development-version": "1.0-alpha"
 }

@@ -7,7 +7,7 @@
     },
     "private": false,
     "license": "MIT",
-    "version": "1.0.3-alpha",
+    "version": "1.0.0",
     "type": "module",
     "files": [
         "src/**",
@@ -27,8 +27,7 @@
     "main": "./dist/ilw-input.js",
     "module": "./dist/ilw-input.js",
     "publishConfig": {
-        "access": "public",
-        "tag": "alpha"
+        "access": "public"
     },
     "scripts": {
         "dev": "vite",
