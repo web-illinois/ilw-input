@@ -1,12 +1,16 @@
 {
-    "title": "Input",
-    "tag": "ilw-input",
-    "github": "https://github.com/web-illinois/ilw-input/",
-    "type": "web component",
-    "element-name": "ilw-input",
-    "description": "Provides classes to style inputs and form elements.",
-    "purpose": "Form elements.",
-    "toolkit-version": "",
-    "production-version": "",
-    "development-version": "1.0-alpha"
+  "title": "Input",
+  "id": "ilw-input",
+  "type": "Web Component",
+  "repository-name": "ilw-input",
+  "description": "Apply consistent Illinois styling to form fields and controls so forms are clear, usable, and visually cohesive.",
+  "purpose": "Form elements.",
+  "customtemplates": [],
+  "versions": [
+    {
+      "name": "1.0",
+      "notes": "",
+      "template": "1.0"
+    }
+  ]
 }
