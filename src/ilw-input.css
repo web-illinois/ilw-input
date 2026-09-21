@@ -137,10 +137,15 @@ ilw-content .ilw-input-entry p, ilw-content .ilw-input-entry-compact p {
 }
 
 ilw-content .ilw-input-alert {
-  color: red;
   padding: 0 5px;
   border-bottom: thin dashed;
   width: fit-content;
+}
+
+ilw-content:not([theme]) .ilw-input-alert,
+ilw-content[theme="white"] .ilw-input-alert,
+ilw-content[theme="gray"] .ilw-input-alert {
+  color: #D40C0C;
 }
 
 .ilw-input-entry-compact, .ilw-input-entry-checkbox-compact {
